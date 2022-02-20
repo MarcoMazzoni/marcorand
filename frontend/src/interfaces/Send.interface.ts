@@ -54,6 +54,14 @@ export interface AlgorandTransactionReceipt {
   link: string;
 }
 
+export interface MinimalAlgoTransactionInfo {
+  transaction_id: string;
+  round: number;
+  from: string;
+  to: string;
+  fees: number;
+}
+
 export interface AlgorandDynamicFeesTxnReceipt {
   main_txn_id: string;
   main_txn_block: string;

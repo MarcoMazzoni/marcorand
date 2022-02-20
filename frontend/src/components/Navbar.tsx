@@ -43,14 +43,9 @@ class MyNavbar extends React.Component<{}> {
                     <span className="avatar avatar-sm rounded-circle">
                       <img
                         alt="..."
-                        src={require('../assets/img/theme/conio-logo--watermelon.png')}
+                        src={require('../assets/img/theme/sketch.jpg')}
                       />
                     </span>
-                    <Media className="ml-2 d-none d-lg-block">
-                      <span className="mb-0 text-sm font-weight-bold">
-                        Conio
-                      </span>
-                    </Media>
                   </Media>
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-menu-arrow" right>
