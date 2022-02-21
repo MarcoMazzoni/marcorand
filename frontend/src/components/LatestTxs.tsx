@@ -34,6 +34,8 @@ export class LatestTxs extends React.Component<LatestTxsProps, LatestTxsState>{
     this.state = {
       transactions: []
     };
+    this.copyToClipboard = this.copyToClipboard.bind(this);
+    this.renderTransactions = this.renderTransactions.bind(this);
   }
 
   async componentDidMount() {
@@ -52,8 +54,9 @@ export class LatestTxs extends React.Component<LatestTxsProps, LatestTxsState>{
 
     // check if there is any transaction
     if (transactions) {
-      for (let i = 0; i < 2; i = i + 1) {
-        let tx = transactions[i];
+      for (let i in transactions) {
+        if (parseInt(i) > 5) break;
+        let tx = transactions[i]; 
         txsDetails.push(
           {
             transaction_id: tx.transaction_id,
@@ -69,9 +72,6 @@ export class LatestTxs extends React.Component<LatestTxsProps, LatestTxsState>{
     this.setState({
       transactions: txsDetails,
     });
-
-    this.copyToClipboard = this.copyToClipboard.bind(this);
-    this.renderTransactions = this.renderTransactions.bind(this);
   };
 
   copyToClipboard(text: string) {

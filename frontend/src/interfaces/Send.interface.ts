@@ -62,6 +62,12 @@ export interface MinimalAlgoTransactionInfo {
   fees: number;
 }
 
+export interface MinimalAlgoRoundInfo {
+  round: number;
+  proposer: string;
+  txs: number;
+}
+
 export interface AlgorandDynamicFeesTxnReceipt {
   main_txn_id: string;
   main_txn_block: string;
