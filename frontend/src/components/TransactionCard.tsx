@@ -18,7 +18,7 @@ import { ErrorModal } from './ErrorModal';
 import { SuccessModal } from './SuccessModal';
 import PulseLoader from "react-spinners/PulseLoader";
 import { css } from "@emotion/react";
-import { CONIO_TOKEN_ASSET_ID, USDC_ASSET_ID } from '../utils/utils';
+import { USDC_ASSET_ID } from '../utils/utils';
 
 
 
